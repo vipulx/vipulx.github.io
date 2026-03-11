@@ -94,3 +94,11 @@ function openPopup() {
 function closePopup() {
     document.getElementById('quotePopup').classList.remove('active');
 }
+
+// vCard toggle interaction
+function toggleVCard() {
+    const vcard = document.querySelector('.vcard-section');
+    if (vcard) {
+        vcard.classList.toggle('flipped');
+    }
+}

@@ -143,12 +143,13 @@
         <a href="index.html" class="logo-link"><img src="vlogo.png" class="logo" alt="Vipul"></a>
         <i class="fa-solid fa-bars" id="menu-icon" onclick="toggleMenu()"></i>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="skills.html">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="index.html"><i class="fa-solid fa-house nav-icon"></i><span class="nav-text">Home</span></a>
+            <a href="services.html"><i class="fa-solid fa-briefcase nav-icon"></i><span class="nav-text">Services</span></a>
+            <a href="projects.html"><i class="fa-solid fa-folder-open nav-icon"></i><span class="nav-text">Projects</span></a>
+            <a href="skills.html"><i class="fa-solid fa-laptop-code nav-icon"></i><span class="nav-text">Skills</span></a>
+            <a href="education.html"><i class="fa-solid fa-graduation-cap nav-icon"></i><span class="nav-text">Education</span></a>
+            <a href="experience.html"><i class="fa-solid fa-chart-line nav-icon"></i><span class="nav-text">Experience</span></a>
+            <a href="contact.html" class="active"><i class="fa-solid fa-envelope nav-icon"></i><span class="nav-text">Contact</span></a>
         </nav>
     </header>
 
@@ -193,14 +194,30 @@
                     <h3>Twitter</h3>
                     <p>Follow me on Twitter</p>
                 </a>
+                
+                <!-- Blog -->
+                <a href="http://blogs.vipul.qzz.io" target="_blank" class="contact-option">
+                    <i class="fa-solid fa-blog"></i>
+                    <h3>Blog</h3>
+                    <p>Read my latest articles</p>
+                </a>
             </div>
 
-            <!-- WhatsApp Section -->
-            <div class="whatsapp-section">
-                <i class="fab fa-whatsapp"></i>
-                <h3>Contact Me on WhatsApp</h3>
-                <p>If you need an immediate response, feel free to contact me via WhatsApp.</p>
-                <a href="https://wa.me/919955594956?text=Hello%20Vipul%2C%20I%20came%20across%20your%20profile%20online%20and%20I%27m%20impressed%20with%20your%20expertise.%20I%27m%20in%20need%20of%20some%20urgent%20assistance%20and%20would%20really%20appreciate%20your%20help.%20Looking%20forward%20to%20discussing%20how%20we%20can%20work%20together." target="_blank">Chat with me on WhatsApp</a>
+            <!-- vCard Section -->
+            <div class="vcard-section" onclick="toggleVCard()">
+                <div class="vcard-front">
+                    <i class="fa-solid fa-address-card"></i>
+                    <h3>Save My Contact</h3>
+                    <p>Click here to easily add me to your phone book.</p>
+                </div>
+                <div class="vcard-back" id="vcard-back-side">
+                    <!-- Placeholder for a QR Code -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ARaj%3BVipul%3B%3B%3B%0AFN%3AVipul%20Raj%0AORG%3APortfolio%0ATEL%3BTYPE%3AWORK%2CMSG%3A%2B919955594956%0AEMAIL%3BTYPE%3AINTERNET%3Avipulraj0152%40example.com%0AURL%3Ahttp%3A%2F%2Fblogs.vipul.qzz.io%0AEND%3AVCARD%0A" alt="QR Code" class="qr-code">
+                    <div class="vcard-buttons">
+                        <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ARaj%3BVipul%3B%3B%3B%0AFN%3AVipul%20Raj%0AORG%3APortfolio%0ATEL%3BTYPE%3AWORK%2CMSG%3A%2B919955594956%0AEMAIL%3BTYPE%3AINTERNET%3Avipulraj0152%40example.com%0AURL%3Ahttp%3A%2F%2Fblogs.vipul.qzz.io%0AEND%3AVCARD%0A" download="Vipul_Raj.vcf" class="btn vcard-btn">Add Contact</a>
+                        <button class="btn vcard-btn secondary-btn" onclick="event.stopPropagation(); toggleVCard();">Close</button>
+                    </div>
+                </div>
             </div>
 
             <div class="social-media">
