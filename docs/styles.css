@@ -161,20 +161,40 @@ span{
     border-radius: 50%;
 }
 
+.home-img{
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
 .home-img img{
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b;
+    box-shadow: 0 0 25px #b74b4b;
     cursor: pointer;
-    transition: 0.2s linear;
+    transition: 0.3s ease;
+    display: block;
+}
+
+/* Vignette / black edge gradient */
+.home-img::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(0,0,0,0) 50%,
+        rgba(0,0,0,0.75) 100%
+    );
+    pointer-events: none;
 }
 
 .home-img img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
+    transform: scale(1.05);
 }
-
 .social-icons a{
     display: inline-flex;
     justify-content: center;
