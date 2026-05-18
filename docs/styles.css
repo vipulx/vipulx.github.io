@@ -158,42 +158,23 @@ span{
 }
 
 .home-img{
-    border-radius: 50%;
-}
-
-.home-img{
     position: relative;
     border-radius: 50%;
     overflow: hidden;
     display: inline-block;
+    background: transparent;
 }
 
 .home-img img{
-    position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px #b74b4b;
-    cursor: pointer;
-    transition: 0.3s ease;
     display: block;
-}
+    object-fit: cover;
 
-/* Vignette / black edge gradient */
-.home-img::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(0,0,0,0) 50%,
-        rgba(0,0,0,0.75) 100%
-    );
-    pointer-events: none;
+    /* Optional enhancements */
+    mix-blend-mode: lighten;
+    filter: contrast(1.1);
 }
-
-.home-img img:hover{
-    transform: scale(1.05);
 }
 .social-icons a{
     display: inline-flex;
